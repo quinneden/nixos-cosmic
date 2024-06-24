@@ -19,9 +19,12 @@
     };
   };
 
+  users.users.root.password = "cbroot";
+
   users.users.quinn = {
     isNormalUser = true;
     extraGroups = ["wheel"];
+    password = "cbro";
     shell = pkgs.zsh;
   };
   nix.settings.allowed-users = ["quinn" "root"];
