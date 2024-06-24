@@ -1,0 +1,34 @@
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [
+    ddcutil
+    edk2
+    entr
+    eza
+    fd
+    ffmpeg
+    file
+    fzf
+    gcc
+    gnumake
+    go
+    inputs.alejandra.defaultPackage.${system}
+    jq
+    just
+    libvirt
+    lima
+    ncdu
+    openssl
+    python3
+    qemu
+    ripgrep
+    unzip
+    vagrant
+    wget
+    xdg-utils
+    xorriso
+  ];
+}
