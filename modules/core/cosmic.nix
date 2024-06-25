@@ -1,10 +1,9 @@
 {
   pkgs,
-  nixos-cosmic,
   inputs,
   ...
 }: {
-  imports = [nixos-cosmic.nixosModules.default];
+  imports = [inputs.nixos-cosmic.nixosModules.default];
 
   services = {
     desktopManager.cosmic.enable = true;

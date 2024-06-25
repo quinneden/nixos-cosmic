@@ -1,6 +1,10 @@
-{ lib, inputs, pkgs, config, ... }: 
-
 {
+  lib,
+  inputs,
+  pkgs,
+  config,
+  ...
+}: {
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
@@ -53,8 +57,6 @@
         format = "[\$virtualenv](\$style) ";
         style = "bright-black";
       };
-
-      palette = "catppuccin_mocha";
-    } // builtins.fromTOML (builtins.readFile "${inputs.catppuccin-starship}/palettes/mocha.toml");
+    };
   };
 }

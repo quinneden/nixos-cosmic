@@ -15,7 +15,6 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
   };
 
   hardware.asahi = {
@@ -43,16 +42,16 @@
     extraModulePackages = [];
   };
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
-    fsType = "btrfs";
-  };
+  # fileSystems."/" = {
+  #   device = "/dev/disk/by-label/nixos";
+  #   fsType = "ext4";
+  # };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/";
-    fsType = "vfat";
-    options = ["fmask=0022" "dmask=0022"];
-  };
+  # fileSystems."/boot" = {
+  #   device = "/dev/disk/by-uuid/";
+  #   fsType = "vfat";
+  #   options = ["fmask=0022" "dmask=0022"];
+  # };
 
   swapDevices = [];
 
